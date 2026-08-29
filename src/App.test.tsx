@@ -23,6 +23,7 @@ describe('LocalAudit', () => {
     expect(screen.getByRole('heading', { name: /privacy signals/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /top domains/i })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /clear audit/i })).toBeInTheDocument()
+    expect(window.scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'auto' })
   })
 
   it('filters the visit log without changing audit totals', async () => {

@@ -186,7 +186,7 @@ export default function App() {
     const normalized = normalizeHistoryRows(rows)
     setEntries(normalized.entries)
     setMeta({ ...nextMeta, skipped: normalized.skipped })
-    window.scrollTo?.({ top: 0, behavior: 'smooth' })
+    window.scrollTo?.({ top: 0, behavior: 'auto' })
   }
 
   function clear() {
